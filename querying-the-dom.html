@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>apple</li>
+        <li>berry</li>
+        <li>cherry</li>
+      </ul>
+      <script>
+        const firstLi = document.querySelector('li');
+        console.log(firstLi.innerText); // <li>apple</li>
+
+        const allLis = document.querySelectorAll('li');
+        console.log(allLis);
+        console.log(allLis[0]);
+        allLis.forEach((li) => {
+            console.log(li.innerText);
+        })
+      </script>
+
+    <article class="content">
+        <section id="first" class="intro">
+            <p>Section 1</p>
+            <ol class="steps">
+                <li>one</li>
+                <li>two</li>
+                <li>three</li>
+            </ol>
+        </section>
+        <section>
+            <p>Section 2</p>
+            <ol class="steps">
+                <li>four</li>
+                <li>five</li>
+                <li>six</li>
+            </ol>
+        </section>
+        <section>
+            <p>Section 3</p>
+        </section>
+    </article>
+  
+    <script>
+        // Using different CSS selectors
+        const a = document.querySelector('.content');
+        console.log(a);
+    
+        const b = document.querySelector('#first'); //same as document.getElementById
+        console.log(b);
+        //b.innerText = "ha";
+    
+        const c = document.querySelectorAll('.steps li');
+        console.log(c);
+    </script>
+</body>
+</html>
